@@ -23,6 +23,30 @@
 
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<style>
+			/* Success Message Styles */
+			.form-status {
+				padding: 15px;
+				margin-bottom: 20px;
+				border-radius: 4px;
+				display: none;
+				text-align: center;
+				font-weight: bold;
+			}
+			
+			.form-status.success {
+				background-color: #4CAF50;
+				color: white;
+				display: block;
+			}
+			
+			.form-status.error {
+				background-color: #f44336;
+				color: white;
+				display: block;
+			}
+		</style>
 	</head>
 
 	<body class="is-preload">
@@ -95,7 +119,7 @@
 							
 								<ul>
 									<li>Built using HTML and CSS with a mobile-first responsive layout</li>
-									<li>Implemented featured listings and dedicated “For Sale” pages</li>
+									<li>Implemented featured listings and dedicated "For Sale" pages</li>
 									<li>Integrated a contact form with email submission using FormSubmit</li>
 									<li>Added a floating WhatsApp CTA to improve customer inquiries and engagement</li>
 									<li>Optimized layout using media queries for desktop, tablet, and mobile devices</li>
@@ -145,7 +169,7 @@
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img src="images/work.jpg" alt="" /></span>
 								
 
 							<h3>January 2021 - March 2021</h3>
@@ -191,52 +215,57 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/about.jpg" alt="" /></span>
 							
 
   <h3>Why I Do What I Do</h3>
   <p>
-    I believe that technology can create meaningful connections and make a real difference in people’s lives. In today’s world, where almost everything happens online, having a strong web presence is more important than ever. That’s why I’m passionate about helping businesses and individuals build web applications that are not only functional but also engaging and easy to use. Every project I take on is driven by the goal of making technology work for you, helping your ideas reach their full potential.
+    I believe that technology can create meaningful connections and make a real difference in people's lives. In today's world, where almost everything happens online, having a strong web presence is more important than ever. That's why I'm passionate about helping businesses and individuals build web applications that are not only functional but also engaging and easy to use. Every project I take on is driven by the goal of making technology work for you, helping your ideas reach their full potential.
   </p>
 
   <h3>How I Do It</h3>
   <p>
-    I create web applications using a full-stack approach, which means I work on both the front-end (what you see) and the back-end (how everything works behind the scenes). My process begins with understanding your needs and vision, then crafting a solution that’s scalable, reliable, and user-friendly. Whether it's building a simple website or a complex application, I ensure that each project is designed to be intuitive and stand the test of time.
+    I create web applications using a full-stack approach, which means I work on both the front-end (what you see) and the back-end (how everything works behind the scenes). My process begins with understanding your needs and vision, then crafting a solution that's scalable, reliable, and user-friendly. Whether it's building a simple website or a complex application, I ensure that each project is designed to be intuitive and stand the test of time.
   </p>
 
   <h3>What I Do</h3>
   <p>
-    As a full-stack web developer, I specialize in building everything from websites to custom web applications. Whether you’re looking for a new website, an e-commerce platform, or a tailored web app, I’m here to help. I focus on delivering high-quality solutions that meet your goals and ensure a smooth user experience. When I’m not coding, you can find me taking long walks, watching tech documentaries, keeping up with track events, or experimenting with new recipes in the kitchen—activities that keep me relaxed, inspired, and constantly coming up with fresh ideas.
+    As a full-stack web developer, I specialize in building everything from websites to custom web applications. Whether you're looking for a new website, an e-commerce platform, or a tailored web app, I'm here to help. I focus on delivering high-quality solutions that meet your goals and ensure a smooth user experience. When I'm not coding, you can find me taking long walks, watching tech documentaries, keeping up with track events, or experimenting with new recipes in the kitchen—activities that keep me relaxed, inspired, and constantly coming up with fresh ideas.
   </p>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								
+								<!-- Status Message Area -->
+								<div id="form-status" class="form-status"></div>
+								
+								<!-- REPLACE 'YOUR_FORM_ID' with your actual Formspree form ID -->
+								<form id="contact-form" method="POST" action="https://formspree.io/f/mbdaowge">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<li><input type="submit" value="Send Message" class="primary" id="submit-btn" /></li>
+										<li><input type="button" value="Reset" id="reset-btn" /></li>
 									</ul>
 								</form>
 								<ul class="icons">
 <!-- 									<li><a href="" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-									<li><a href="https://www.facebook.com/lites.sparks.3?mibextid=ZbWKwL" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/muth.0neey?igsh=c2I0Njd1ZGtvdDRi" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://x.com/MNehooh" class="icon brands fa-twitter"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.linkedin.com/in/neon-muthoni/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
 									<li><a href="https://github.com/Error404notf" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
@@ -501,6 +530,51 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<!-- Contact Form Script -->
+			<script>
+				// Get form elements
+				const form = document.getElementById('contact-form');
+				const resetBtn = document.getElementById('reset-btn');
+				const statusDiv = document.getElementById('form-status');
+				const submitBtn = document.getElementById('submit-btn');
+
+				// Handle form submission
+				form.addEventListener('submit', function(e) {
+					// Show submitting state
+					submitBtn.value = 'Sending...';
+					submitBtn.disabled = true;
+					statusDiv.textContent = '';
+					statusDiv.className = 'form-status';
+				});
+
+				// Check URL for Formspree success/error parameters
+				window.addEventListener('load', function() {
+					const urlParams = new URLSearchParams(window.location.search);
+					
+					// Check if form was submitted successfully
+					if (window.location.hash === '#contact' && document.referrer.includes('formspree.io')) {
+						statusDiv.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+						statusDiv.className = 'form-status success';
+						form.reset();
+						
+						// Auto-hide success message after 5 seconds
+						setTimeout(function() {
+							statusDiv.className = 'form-status';
+							statusDiv.textContent = '';
+						}, 5000);
+					}
+				});
+
+				// Handle reset button with confirmation
+				resetBtn.addEventListener('click', function() {
+					if (confirm('Are you sure you want to clear the form?')) {
+						form.reset();
+						statusDiv.className = 'form-status';
+						statusDiv.textContent = '';
+					}
+				});
+			</script>
 
 	</body>
 </html>
